@@ -1,0 +1,87 @@
+
+.timeline-section1 .timeline-icon-section,
+.timeline-section2 .timeline-content-top{
+    position: relative;
+    border-bottom:20px solid #DC3545;
+    height:210px;
+}
+.timeline-section2 .timeline-content-top{
+    border-bottom:20px solid #17A2B8;
+    padding-top: 30px;
+}
+.timeline-section1 .timeline-icon-section:after{
+    content: " ";
+    position:absolute; 
+    top:190px;
+    right: 0px;
+    border:10px solid #fff;
+    border-left-color:#DC3545;
+}
+.timeline-section1 .timeline-icon-section:before{
+    content: " ";
+    position:absolute; 
+    top:190px;
+    left:0px;
+    border:10px solid transparent;
+    border-left-color:#fff;
+}
+.timeline-section2 .timeline-icon-section:after{
+    content: " ";
+    position:absolute; 
+    top:-20px;
+    right: 0px;
+    border:10px solid #fff;
+    border-left-color:#17A2B8;
+}
+.timeline-section2 .timeline-icon-section:before{
+    content: " ";
+    position:absolute; 
+    top:-20px;
+    left:0px;
+    border:10px solid transparent;
+    border-left-color:#fff;
+}
+.timeline-icon-section img{
+    border: 1px solid #DC3545;
+    width: 100px;
+    height: 100px;
+}
+.borders{
+    border-right:1px solid #c2c2c2;
+    height:50px;
+    width: 1px;
+    margin: 20px auto;
+}
+.timeline-section2 .timeline-icon-section img{
+    border: 1px solid #17A2B8;
+} 
+.timeline-content-bottom{
+    margin-top:70px;
+}
+.timeline-content-bottom h1,.timeline-content-top h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+.timeline-section2 .timeline-content-top{
+    height:210px;
+}
+@media (min-width:320px) and (max-width:640px){
+    .timeline-section1 .timeline-icon-section::after,
+    .timeline-section1 .timeline-icon-section::before,
+    .timeline-section2 .timeline-icon-section::before,
+    .timeline-section2 .timeline-icon-section::after,
+    .timeline-section2 .timeline-icon-section,
+    .timeline-section2 .timeline-content-top,
+    .timeline-section1 .timeline-icon-section{
+        border:none;
+        
+    }
+    .timeline-section2{
+        border-bottom: 3px solid #2CA2B8;
+        margin-bottom: 15px;
+    }
+    .timeline-section1{
+        border-bottom: 3px solid #DC3545;
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,51 @@
+<?php namespace Controllers;
+
+require_once "../Autoload.php";
+
+use Controllers\controllerApp as controllerApp;
+
+$datos = new controllerApp;
+$data = $datos->esquemaColectivo();
+
+?>
+
+
+<div class="row mt-3">
+	<div class="col">
+
+		<div class="table-responsive-sm mt-3">
+			<table class="table table-striped text-light" id="tablaocm">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">OCM</th>
+						<th scope="col">Gerencia</th>
+						<th scope="col">Dirección</th>
+						<th scope="col" class="amber-text">EIA</th>
+						<th scope="col" class="teal-text">EDS</th>
+						<th scope="col" class="blue-grey-text">EDQ</th>
+						<th scope="col" class="blue-text">EDH</th>
+						<th scope="col" class=""></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($data as $ocm) { 
+						$o = $ocm['id']."||".$ocm['nombre'];?>
+					<tr>
+						<th scope="row"><?php echo $ocm['id']; ?></th>
+						<td><?php echo $ocm['nombre']; ?></td>
+						<td><?php echo $ocm['gerencia']; ?></td>
+						<td><?php echo $ocm['direccion']; ?></td>
+						<td><?php echo $ocm['eia']; ?></td>
+						<td><?php echo $ocm['eds']; ?></td>
+						<td><?php echo $ocm['edq']; ?></td>
+						<td><?php echo $ocm['edh']; ?></td>
+						<td class="text-warning"><i class="fas fa-search" style="cursor: pointer;" onclick="crear('ocm',<?php echo "'$o'"; ?>);"></i></td>
+					</tr>
+
+					<?php } ?>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

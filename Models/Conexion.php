@@ -5,7 +5,7 @@ class Conexion {
 	private $con;
 
 	public function __construct (){
-    $this->con = new \PDO('mysql:host=localhost;dbname=utils;charset=utf8mb4', 'root', ''); 
+    $this->con = new \PDO('mysql:host=localhost;dbname=gpcg;charset=utf8mb4', 'root', ''); 
     $this->con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		
 	}
